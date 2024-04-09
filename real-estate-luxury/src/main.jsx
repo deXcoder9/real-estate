@@ -11,6 +11,7 @@ import ErrorPage from './Shared/ErrorPage.jsx';
 import SignIN from './Components/Authentication/SignIN.jsx';
 import SignUP from './Components/Authentication/SignUP.jsx';
 import AuthProvider from './Auth Provider/AuthProvider.jsx';
+import UpdatePfp from './Components/Update Profile/UpdatePfp.jsx';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: '/signup',
         element: <SignUP></SignUP>
+      },
+      {
+        path: '/updateProfile',
+        element: <UpdatePfp></UpdatePfp>
       }
     ]
   },

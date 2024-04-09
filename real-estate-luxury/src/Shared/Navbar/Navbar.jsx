@@ -39,7 +39,6 @@ const Navbar = () => {
                     userInfo ?
                         <div className="flex space-x-5"> <img className="h-14 rounded-full" src={userInfo.photoURL} /> <button onClick={handleLogOut} className="btn btn-primary"> Log Out</button>  </div>
                         : <div> <button className="btn"> <Link to='/signin'>Login</Link> </button>
-                            <button className="btn"> <Link to='/signup'>SignUp</Link> </button>
                         </div>
                 }
             </div>

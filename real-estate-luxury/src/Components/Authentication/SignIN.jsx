@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Auth Provider/AuthProvider";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import auth from "../../../firebase.config";
 
 
@@ -35,6 +35,17 @@ const SignIN = () => {
             .catch(error => console.log(error.message))
     }
 
+    const githubProvider = new GithubAuthProvider()
+    const handleGithubLogin = () => {
+        signInWithPopup(auth, githubProvider)
+            .then(result => {
+                console.log(result.user)
+                alert("successfully logged in")
+            })
+            .catch(error => console.log(error.message))
+    }
+
+
     return (
         <div className="login">
 
@@ -64,6 +75,7 @@ const SignIN = () => {
                 </div>
             </form>
             <button className="btn btn-primary" onClick={handleGoogleLogin}>Google</button>
+            <button className="btn btn-primary" onClick={handleGithubLogin}>Github</button>
         </div>
     );
 };
