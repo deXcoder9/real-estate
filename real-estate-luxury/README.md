@@ -1,8 +1,32 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#Overview:
 
-Currently, two official plugins are available:
+This project is a real estate website designed to provide users with a seamless experience for browsing properties, updating profiles, and managing authentication.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#Navbar Functionality:
+The navbar includes links for Home, Update Profile, and User Profile. The visibility of the user profile depends on login status.
+Authentication:
+
+Users can log in using email and password or through social media platforms like Google, GitHub, Facebook, or Twitter.
+
+#Registration:
+Registration requires essential information like name, email, and password, ensuring password strength with specific criteria.
+
+#Slider Banner:
+The website features an engaging slider banner with a minimum of three slides to showcase properties or promotions.
+
+#Estate Listings:
+Estates are categorized and displayed with relevant information such as images, titles, descriptions, prices, and available facilities.
+
+#Estate Details:
+Users can view detailed information about a property, including amenities, location, and status, and navigate to the property's page.
+Protected Routes:
+
+Certain pages, like the Update Profile and Estate Details, are accessible only when logged in, ensuring privacy and security.
+
+#Toast Alerts:
+Toast or Sweet Alert notifications provide feedback on successful login/register actions or errors in password validation.
+
+#Extra Route:
+An additional protected route offers meaningful content, enhancing the user experience beyond basic property listings.
