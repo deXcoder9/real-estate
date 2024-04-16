@@ -3,6 +3,8 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { saveEstates } from "../Cart/script";
 import { useContext } from "react";
 import { AuthContext } from "../../Auth Provider/AuthProvider";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Details = () => {
@@ -18,7 +20,7 @@ const Details = () => {
 
 
     const addToCart = () => {
-        alert('Added to the Cart')
+        toast.success('Added to the Cart')
         saveEstates(property)
     };
     // const ErrorCard = () =>{
@@ -51,8 +53,9 @@ const Details = () => {
                         userInfo ?
                             <button onClick={addToCart} className="btn btn-primary">Add To Card</button>
                             :
-                            <button onClick={() => alert('Please sign in first ')} className="btn btn-primary">Add To Card</button>
+                            <button onClick={() => toast.error('Please sign in first ')} className="btn btn-primary">Add To Card</button>
                     }
+                    <ToastContainer />
                 </div>
             </div>
         </div>

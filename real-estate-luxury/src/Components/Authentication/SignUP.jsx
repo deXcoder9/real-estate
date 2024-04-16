@@ -3,6 +3,8 @@ import { AuthContext } from "../../Auth Provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import { Link } from "react-router-dom";
 import 'animate.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const SignUP = () => {
@@ -35,11 +37,16 @@ const SignUP = () => {
         handleRegistrationAuth(email, password)
             .then(result => {
                 console.log(result.user)
-                alert("successfully created user")
                 updateProfile(result.user, {
                     displayName: name,
                     photoURL: photoURL,
                 }).then(() => {
+                    toast.success("successfully created user", {
+                        position: "top-center"
+                    })
+                    setTimeout(function () {
+                        window.location.href = "/";
+                    }, 2000);
                     console.log('profile updated');
                 })
                     // .then()
@@ -82,6 +89,7 @@ const SignUP = () => {
                 </div>
 
                 <button type="submit" className="login__button">Register</button>
+                <ToastContainer />
 
                 <div className="login__register">
                     already have an account? <Link to='/signin' className="underline">Login</Link>

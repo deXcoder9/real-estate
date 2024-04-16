@@ -5,6 +5,8 @@ import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react';
 import 'animate.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = () => {
     const { userInfo, handleSignOut } = useContext(AuthContext)
@@ -12,7 +14,9 @@ const Navbar = () => {
 
     const handleLogOut = () => {
         handleSignOut()
-            .then(() => alert('user Logged Out'))
+            .then(() => toast.success("user logged out", {
+                position: "top-center"
+            }))
             .catch(error => console.log(error.message))
     }
     const navLinks = <>
@@ -22,7 +26,7 @@ const Navbar = () => {
         <li> <NavLink to='/cart'> Cart </NavLink> </li>
     </>
     useEffect(() => {
-        Aos.init({ duration: 2000 });
+        Aos.init({ duration: 1600 });
     }, [])
     return (
         <div className="navbar bg-base-100 animate__animated  animate__backInRight " >
@@ -49,6 +53,7 @@ const Navbar = () => {
                         : <div> <button className="btn"> <Link to='/signin'>Login</Link> </button>
                         </div>
                 }
+                <ToastContainer />
             </div>
         </div >
     );

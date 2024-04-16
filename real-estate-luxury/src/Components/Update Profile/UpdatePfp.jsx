@@ -1,6 +1,8 @@
 import { updateProfile } from "firebase/auth";
 import auth from "../../../firebase.config";
 import { useEffect } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const UpdatePfp = () => {
@@ -14,7 +16,7 @@ const UpdatePfp = () => {
         updateProfile(auth.currentUser, {
             displayName: name, photoURL: photoURL
         }).then(() => {
-            alert('Profile updated!')
+            toast.success('Profile updated!')
             // ...
         }).catch((error) => {
             console.log(error.message)
@@ -46,6 +48,7 @@ const UpdatePfp = () => {
                         <div className="my-6">
                             <button type="submit" className="w-full rounded-md bg-black px-3 py-4 text-white focus:bg-gray-600 focus:outline-none">Update</button>
                         </div>
+                        <ToastContainer />
                     </form>
                 </div>
             </div>

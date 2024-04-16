@@ -1,16 +1,18 @@
 import { useContext, useEffect } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, } from "react-router-dom";
 import { AuthContext } from "../../Auth Provider/AuthProvider";
 import { GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import auth from "../../../firebase.config";
 import 'animate.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const SignIN = () => {
     const { handleLoginAuth } = useContext(AuthContext)
-    const location = useLocation()
-    console.log(location)
-    const navigate = useNavigate()
+    // const location = useLocation()
+    // // console.log(location)
+    // const navigate = useNavigate()
     const handleLogin = e => {
         e.preventDefault()
         const form = new FormData(e.currentTarget)
@@ -22,8 +24,10 @@ const SignIN = () => {
         handleLoginAuth(email, password)
             .then(result => {
                 console.log(result.user)
-                alert("successfully  logged in")
-                navigate(location?.state ? location.state : '/')
+                toast.success("successfully  logged in through from")
+                setTimeout(function () {
+                    window.location.href = "/";
+                }, 2000);
             })
             .catch(error => {
                 console.log(error.message)
@@ -34,7 +38,10 @@ const SignIN = () => {
         signInWithPopup(auth, googleProvider)
             .then(result => {
                 console.log(result.user)
-                alert("successfully logged in")
+                toast.success("successfully logged in ")
+                setTimeout(function () {
+                    window.location.href = "/";
+                }, 2000);
             })
             .catch(error => console.log(error.message))
     }
@@ -44,7 +51,10 @@ const SignIN = () => {
         signInWithPopup(auth, githubProvider)
             .then(result => {
                 console.log(result.user)
-                alert("successfully logged in")
+                toast.success("successfully logged in ")
+                setTimeout(function () {
+                    window.location.href = "/";
+                }, 2000);
             })
             .catch(error => console.log(error.message))
     }
@@ -79,6 +89,7 @@ const SignIN = () => {
             <div className="lg:-mt-20 md:mt-20 mx-auto space-x-5">
                 <button className="bg_btn_color btn text-white btn-primary" onClick={handleGoogleLogin}>Google</button>
                 <button className="bg_btn_color btn text-white btn-primary" onClick={handleGithubLogin}>Github</button>
+                <ToastContainer />
             </div>
         </div>
     );
