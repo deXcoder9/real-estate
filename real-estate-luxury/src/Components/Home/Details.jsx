@@ -1,9 +1,13 @@
 
 import { useLoaderData, useParams } from "react-router-dom";
 import { saveEstates } from "../Cart/script";
+import { useContext } from "react";
+import { AuthContext } from "../../Auth Provider/AuthProvider";
 
 
 const Details = () => {
+    const { userInfo } = useContext(AuthContext)
+    console.log(userInfo)
     const properties = useLoaderData()
     // console.log(properties)
     const { id } = useParams()
@@ -13,10 +17,13 @@ const Details = () => {
     const { segment_name, area, estate_title, price, description, facilities, status, location, image } = property;
 
 
-
     const addToCart = () => {
+        alert('Added to the Cart')
         saveEstates(property)
     };
+    // const ErrorCard = () =>{
+    //     alet
+    // }
     return (
         <div className="my-10">
             <div className="resorts_COntainer ">
@@ -39,7 +46,13 @@ const Details = () => {
                         <p className='py-1 text-red-500 capitalize'>{price}</p>
                         <p className='uppercase bg-green-500 py-1 rounded-xl text-white px-5'>{status}</p>
                     </div>
-                    <button onClick={addToCart} className="btn btn-primary">Add To Card</button>
+
+                    {
+                        userInfo ?
+                            <button onClick={addToCart} className="btn btn-primary">Add To Card</button>
+                            :
+                            <button onClick={() => alert('Please sign in first ')} className="btn btn-primary">Add To Card</button>
+                    }
                 </div>
             </div>
         </div>
