@@ -53,7 +53,7 @@ const SignIN = () => {
     }, [])
 
     return (
-        <div className="login">
+        <div className="login my-10">
 
             <form onSubmit={handleLogin} className="login__form">
                 <h1 className="login__title">Login</h1>
@@ -76,7 +76,7 @@ const SignIN = () => {
                     Dont have an account? <Link to='/signup' className="underline">Register</Link>
                 </div>
             </form>
-            <div className="-mt-20 mx-auto space-x-5">
+            <div className="lg:-mt-20 md:mt-20 mx-auto space-x-5">
                 <button className="bg_btn_color btn text-white btn-primary" onClick={handleGoogleLogin}>Google</button>
                 <button className="bg_btn_color btn text-white btn-primary" onClick={handleGithubLogin}>Github</button>
             </div>

@@ -7,6 +7,9 @@ import 'swiper/scss/pagination';
 import { useLoaderData } from 'react-router-dom';
 import SingleResort from './SingleResort';
 import { useEffect } from 'react';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
 
 const Home = () => {
 
@@ -14,18 +17,20 @@ const Home = () => {
     // console.log(data)
     useEffect(() => {
         document.title = "Home"
+        Aos.init({ duration: 1000 });
     }, [])
 
     return (
         <div className='my-4 ' >
             <Swiper
-                className='h-[500px] mb-10'
+                className='h-[500px] mb-10 -z-0'
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={50}
                 slidesPerView={1}
                 navigation
                 pagination={{ clickable: true }}
                 scrollbar={{ draggable: true }}
+                data-aos="fade-up"
             // onSwiper={(swiper) => console.log(swiper)}
             // onSlideChange={() => console.log('slide change')}
             >
@@ -59,8 +64,9 @@ const Home = () => {
                 </SwiperSlide>
             </Swiper>
             <div>
-                <h2 className="text-center text-3xl text-black font__merriweather font-bold">Resorts</h2>
-                <p className="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, non!</p>
+                <h2 className="text-center text-3xl text-black font__merriweather font-bold" data-aos="slide-right" >Estates</h2>
+                <p className="text-center lg:w-[600px] mx-auto text-gray-500" data-aos="slide-right">
+                    Estates are large properties, often with a main house and extensive land, commonly associated with wealth, aristocracy, and historical significance.</p>
 
                 <div className="mt-6  grid lg:grid-cols-2 grid-cols-1 md:grid-cols-2 place-items-center space-y-4">
                     {

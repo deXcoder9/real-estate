@@ -1,6 +1,9 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Auth Provider/AuthProvider";
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react';
 
 const Navbar = () => {
     const { userInfo, handleSignOut } = useContext(AuthContext)
@@ -8,18 +11,26 @@ const Navbar = () => {
 
     const handleLogOut = () => {
         handleSignOut()
-            .then(() => console.log('user Logged Out'))
+            .then(() => alert('user Logged Out'))
             .catch(error => console.log(error.message))
     }
     const navLinks = <>
         <li> <NavLink to='/'> Home </NavLink> </li>
-        <li> <NavLink to='/updateProfile'> Update Profile </NavLink> </li>
-        <li> <NavLink to='/userProfile'> User Profile </NavLink> </li>
+        {userInfo ? (
+            <>
+                <li> <NavLink to='/updateProfile'> Update Profile </NavLink> </li>
+                <li> <NavLink to='/userProfile'> User Profile </NavLink> </li>
+            </>
+        ) : (
+            <></>
+        )}
         <li> <NavLink to='/cart'> Cart </NavLink> </li>
-
     </>
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, [])
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 " data-aos="slide-right">
             <div className="navbar-start">
                 <div className="dropdown ">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -31,7 +42,7 @@ const Navbar = () => {
                 </div>
                 <a className="btn btn-ghost text-xl">Oni-giri</a>
             </div>
-            <div className="navbar-center hidden lg:flex">
+            <div className="navbar-center hidden lg:flex z-20">
                 <ul className="menu menu-horizontal px-1">
                     {navLinks}
                 </ul>
