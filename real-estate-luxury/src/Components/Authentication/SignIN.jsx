@@ -27,7 +27,7 @@ const SignIN = () => {
                 toast.success("successfully  logged in through from")
                 setTimeout(function () {
                     window.location.href = "/";
-                }, 2000);
+                }, 1000);
             })
             .catch(error => {
                 console.log(error.message)
@@ -41,7 +41,7 @@ const SignIN = () => {
                 toast.success("successfully logged in ")
                 setTimeout(function () {
                     window.location.href = "/";
-                }, 2000);
+                }, 1000);
             })
             .catch(error => console.log(error.message))
     }
@@ -54,7 +54,7 @@ const SignIN = () => {
                 toast.success("successfully logged in ")
                 setTimeout(function () {
                     window.location.href = "/";
-                }, 2000);
+                }, 1000);
             })
             .catch(error => console.log(error.message))
     }

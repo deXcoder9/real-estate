@@ -46,7 +46,7 @@ const SignUP = () => {
                     })
                     setTimeout(function () {
                         window.location.href = "/";
-                    }, 2000);
+                    }, 1000);
                     console.log('profile updated');
                 })
                     // .then()
