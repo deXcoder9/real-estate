@@ -7,8 +7,9 @@ import 'swiper/scss/pagination';
 import { useLoaderData } from 'react-router-dom';
 import SingleResort from './SingleResort';
 import { useEffect } from 'react';
-import Aos from 'aos'
+// import Aos from 'aos'
 import 'aos/dist/aos.css'
+import 'animate.css';
 
 
 const Home = () => {
@@ -17,20 +18,20 @@ const Home = () => {
     // console.log(data)
     useEffect(() => {
         document.title = "Home"
-        Aos.init({ duration: 1000 });
+        // Aos.init({ duration: 600 });
     }, [])
 
     return (
-        <div className='my-4 ' >
+        <div className='my-4 z-0  animate__animated  animate__backInLeft'  >
             <Swiper
-                className='h-[500px] mb-10 -z-0'
+                className='h-[500px] mb-10 '
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={50}
                 slidesPerView={1}
                 navigation
                 pagination={{ clickable: true }}
                 scrollbar={{ draggable: true }}
-                data-aos="fade-up"
+            // data-aos="fade-up"
             // onSwiper={(swiper) => console.log(swiper)}
             // onSlideChange={() => console.log('slide change')}
             >

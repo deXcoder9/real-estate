@@ -5,8 +5,6 @@ import PropTypes from 'prop-types';
 
 const PrivateRoute = ({ children }) => {
     const { userInfo, loading } = useContext(AuthContext)
-    const location = useLocation()
-    // console.log(location.pathname)
     if (loading) {
         // return <span className="loading loading-infinity loading-lg"></span>
         return <div className="relative h-screen flex justify-center items-center">
@@ -17,7 +15,7 @@ const PrivateRoute = ({ children }) => {
     if (userInfo) {
         return children;
     }
-    return <Navigate state={location.pathname} to='/signin'></Navigate>
+    return <Navigate to='/signin'></Navigate>
 };
 
 PrivateRoute.propTypes = {

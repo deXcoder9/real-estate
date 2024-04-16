@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Auth Provider/AuthProvider";
 import { GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import auth from "../../../firebase.config";
-
+import 'animate.css';
 
 
 const SignIN = () => {
@@ -53,7 +53,7 @@ const SignIN = () => {
     }, [])
 
     return (
-        <div className="login my-10">
+        <div className="login my-10  animate__animated  animate__backInLeft">
 
             <form onSubmit={handleLogin} className="login__form">
                 <h1 className="login__title">Login</h1>

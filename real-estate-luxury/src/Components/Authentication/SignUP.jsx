@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Auth Provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import { Link } from "react-router-dom";
+import 'animate.css';
 
 
 const SignUP = () => {
@@ -54,7 +55,7 @@ const SignUP = () => {
     }, [])
 
     return (
-        <div className="login my-10">
+        <div className="login my-10  animate__animated  animate__backInRight">
 
             <form onSubmit={handleRegistration} className="login__form">
                 <h1 className="login__title">Registration</h1>
