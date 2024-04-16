@@ -1,0 +1,107 @@
+[
+    {
+      "estate_title": "Luxury Beachfront Villa",
+      "id": 1,
+      "segment_name": "Villas",
+      "description": "Experience unparalleled luxury in this exquisite beachfront villa, boasting breathtaking ocean views and lavish amenities.",
+      "price": "$10,000,000",
+      "status": "sale",
+      "area": "5000 sq ft",
+      "location": "Malibu, California",
+      "facilities": ["Private beach access", "Infinity pool", "Gourmet kitchen"],
+      "image": "https://i.ibb.co/tJtfJ1f/young-stylish-hipster-couple-love-walking-playing-dog-puppy-jack-russell-tropical-beach-cool-outfit.jpg",
+      "view_property_button": "View Property"
+    },
+    {
+      "estate_title": "Exclusive Penthouse",
+      "id": 2,
+      "segment_name": "Penthouses",
+      "description": "Indulge in opulence with this exclusive penthouse offering panoramic city views, sophisticated design, and unparalleled privacy.",
+      "price": "$7,500,000",
+      "status": "sale",
+      "area": "3000 sq ft",
+      "location": "Manhattan, New York",
+      "facilities": ["Floor-to-ceiling windows", "Private terrace", "State-of-the-art gym"],
+      "image": "https://i.ibb.co/k4RmHGh/panorama-luxury-living-room-generative-ai-587448-2069.jpg",
+      "view_property_button": "View Property"
+    },
+    {
+      "estate_title": "Luxury Resort",
+      "id": 3,
+      "segment_name": "Resorts",
+      "description": "Escape to this luxury resort sanctuary nestled amidst lush tropical gardens, offering world-class amenities and unparalleled tranquility.",
+      "price": "$15,000,000",
+      "status": "sale",
+      "area": "20 acres",
+      "location": "Bora Bora, French Polynesia",
+      "facilities": ["Private bungalows", "Spa and wellness center", "Water sports activities"],
+      "image": "https://i.ibb.co/4Pmy7xt/view-pool-hotel-ocean-water-1203-4730.jpg",
+      "view_property_button": "View Property"
+    },
+    {
+      "estate_title": "Private Island Paradise",
+      "id": 4,
+      "segment_name": "Private Islands",
+      "description": "Own your private slice of paradise with this exclusive island retreat, featuring pristine beaches, lush landscapes, and ultimate seclusion.",
+      "price": "$20,000,000",
+      "status": "sale",
+      "area": "50 acres",
+      "location": "Fiji",
+      "facilities": ["Luxury villas", "Helipad", "Diving center"],
+      "image": "https://i.ibb.co/nQgGB9m/photo-1516091877740-fde016699f2c-q-80-w-1374-auto-format-fit-crop-ixlib-rb-4-0.jpg",
+      "view_property_button": "View Property"
+    },
+    {
+      "estate_title": "Mansion with Ocean Views",
+      "id": 5,
+      "segment_name": "Mansions",
+      "description": "Experience grandeur in this magnificent mansion offering unparalleled ocean views, luxurious amenities, and exquisite architectural design.",
+      "price": "$25,000,000",
+      "status": "sale",
+      "area": "10000 sq ft",
+      "location": "Bel Air, Los Angeles",
+      "facilities": ["Home theater", "Wine cellar", "Tennis court"],
+      "image": "https://i.ibb.co/8mPHhCh/photo-1666157827458-4d6ad305458e-q-80-w-1470-auto-format-fit-crop-ixlib-rb-4-0.jpg",
+      "view_property_button": "View Property"
+    },
+    {
+      "estate_title": "Exquisite Beachfront Condo",
+      "id": 6,
+      "segment_name": "Beachfront Properties",
+      "description": "Embrace beachfront living in this exquisite condo featuring stunning ocean views, luxurious interiors, and resort-style amenities.",
+      "price": "$3,500,000",
+      "status": "sale",
+      "area": "2000 sq ft",
+      "location": "Miami Beach, Florida",
+      "facilities": ["Direct beach access", "Poolside cabanas", "Fitness center"],
+      "image": "https://i.ibb.co/y5tjpP4/7871dea6.jpg",
+      "view_property_button": "View Property"
+    },
+    {
+      "estate_title": "Luxurious Mountain Retreat",
+      "id": 7,
+      "segment_name": "Resorts",
+      "description": "Escape to this luxurious mountain retreat offering breathtaking views, upscale accommodations, and world-class recreational activities.",
+      "price": "$12,000,000",
+      "status": "sale",
+      "area": "300 acres",
+      "location": "Aspen, Colorado",
+      "facilities": ["Ski-in/ski-out access", "Spa and wellness center", "Gourmet dining"],
+      "image": "https://i.ibb.co/Qk55wn4/photorealistic-wooden-house-with-timber-structure-23-2151302596.jpg",
+      "view_property_button": "View Property"
+    },
+    {
+      "estate_title": "Secluded Hilltop Mansion",
+      "id": 8,
+      "segment_name": "Mansions",
+      "description": "Discover ultimate privacy and luxury in this secluded hilltop mansion boasting panoramic views, resort-style amenities, and impeccable craftsmanship.",
+      "price": "$30,000,000",
+      "status": "sale",
+      "area": "15000 sq ft",
+      "location": "Beverly Hills, California",
+      "facilities": ["Infinity-edge pool", "Home automation system", "Private tennis court"],
+      "image": "https://i.ibb.co/FWCxSLH/amazing-view-bukoje-manor-slovenia-surrounded-by-trees-181624-24312.jpg",
+      "view_property_button": "View Property"
+    }
+  ]
+  

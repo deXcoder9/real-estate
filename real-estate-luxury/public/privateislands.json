@@ -1,0 +1,81 @@
+[
+    {
+      "image": "image_url_1.jpg",
+      "estate_title": "Tranquil Bay Retreat",
+      "id": "001",
+      "segment_name": "Luxury",
+      "description": "Escape to this secluded island paradise with pristine beaches, lush gardens, and luxurious amenities. Perfect for private getaways and exclusive events.",
+      "price": "$10,000,000",
+      "status": "sale",
+      "area": "5000 sq ft",
+      "location": "Belize",
+      "facilities": ["living room", "swimming pool", "kitchen"],
+      "View Property": "https://example.com/property/001"
+    },
+    {
+      "image": "image_url_2.jpg",
+      "estate_title": "Island Bliss Haven",
+      "id": "002",
+      "segment_name": "Exclusive",
+      "description": "Indulge in luxury living on this serene island oasis. Enjoy panoramic ocean views, private beaches, and world-class amenities.",
+      "price": "$15,000,000",
+      "status": "sale",
+      "area": "7000 sq ft",
+      "location": "Bahamas",
+      "facilities": ["living room", "swimming pool", "kitchen"],
+      "View Property": "https://example.com/property/002"
+    },
+    {
+      "image": "image_url_3.jpg",
+      "estate_title": "Paradise Cove Retreat",
+      "id": "003",
+      "segment_name": "Luxury",
+      "description": "Experience ultimate luxury on this private island sanctuary. Enjoy tranquil surroundings, lavish accommodations, and breathtaking sunsets.",
+      "price": "$12,500,000",
+      "status": "sale",
+      "area": "6000 sq ft",
+      "location": "Fiji",
+      "facilities": ["living room", "swimming pool", "kitchen"],
+      "View Property": "https://example.com/property/003"
+    },
+    {
+      "image": "image_url_4.jpg",
+      "estate_title": "Emerald Isle Estate",
+      "id": "004",
+      "segment_name": "Exclusive",
+      "description": "Discover the epitome of luxury living on this exclusive island retreat. Featuring exquisite design, unparalleled views, and world-class amenities.",
+      "price": "$20,000,000",
+      "status": "sale",
+      "area": "8000 sq ft",
+      "location": "Maldives",
+      "facilities": ["living room", "swimming pool", "kitchen"],
+      "View Property": "https://example.com/property/004"
+    },
+    {
+      "image": "image_url_5.jpg",
+      "estate_title": "Sunset Serenity Island",
+      "id": "005",
+      "segment_name": "Luxury",
+      "description": "Escape to this secluded paradise where every sunset is a masterpiece. Immerse yourself in luxury and tranquility amidst stunning natural beauty.",
+      "price": "$18,000,000",
+      "status": "sale",
+      "area": "7500 sq ft",
+      "location": "Seychelles",
+      "facilities": ["living room", "swimming pool", "kitchen"],
+      "View Property": "https://example.com/property/005"
+    },
+    {
+      "image": "image_url_6.jpg",
+      "estate_title": "Azure Waters Retreat",
+      "id": "006",
+      "segment_name": "Exclusive",
+      "description": "Experience the ultimate escape on this exclusive island sanctuary. With azure waters, white sandy beaches, and luxurious accommodations, it's pure bliss.",
+      "price": "$25,000,000",
+      "status": "sale",
+      "area": "9000 sq ft",
+      "location": "Greece",
+      "facilities": ["living room", "swimming pool", "kitchen"],
+      "View Property": "https://example.com/property/006"
+    }
+  ]
+  

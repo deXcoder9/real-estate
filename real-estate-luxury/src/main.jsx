@@ -12,6 +12,10 @@ import SignIN from './Components/Authentication/SignIN.jsx';
 import SignUP from './Components/Authentication/SignUP.jsx';
 import AuthProvider from './Auth Provider/AuthProvider.jsx';
 import UpdatePfp from './Components/Update Profile/UpdatePfp.jsx';
+import UserProfile from './Components/User pf/UserProfile.jsx';
+import PrivateRoute from './Components/Private Routee/PrivateRoute.jsx';
+import Details from './Components/Home/Details.jsx';
+import Cart from './Components/Cart/Cart.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,8 +25,23 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: () => fetch('resorts.json')
       },
+      {
+        path: '/updateProfile',
+        element: <UpdatePfp></UpdatePfp>
+      },
+      {
+        path: '/userProfile',
+        element: <UserProfile></UserProfile>
+      },
+      {
+        path: '/details/:id',
+        loader: () => fetch('resorts.json'),
+        element: <Details></Details>
+      },
+
       {
         path: '/signin',
         element: <SignIN></SignIN>
@@ -32,8 +51,8 @@ const router = createBrowserRouter([
         element: <SignUP></SignUP>
       },
       {
-        path: '/updateProfile',
-        element: <UpdatePfp></UpdatePfp>
+        path: '/cart',
+        element: <PrivateRoute><Cart></Cart></PrivateRoute>
       }
     ]
   },

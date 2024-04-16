@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useEffect } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Auth Provider/AuthProvider";
 import { GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import auth from "../../../firebase.config";
@@ -8,6 +8,9 @@ import auth from "../../../firebase.config";
 
 const SignIN = () => {
     const { handleLoginAuth } = useContext(AuthContext)
+    const location = useLocation()
+    console.log(location)
+    const navigate = useNavigate()
     const handleLogin = e => {
         e.preventDefault()
         const form = new FormData(e.currentTarget)
@@ -20,6 +23,7 @@ const SignIN = () => {
             .then(result => {
                 console.log(result.user)
                 alert("successfully  logged in")
+                navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
                 console.log(error.message)
@@ -44,7 +48,9 @@ const SignIN = () => {
             })
             .catch(error => console.log(error.message))
     }
-
+    useEffect(() => {
+        document.title = "Login"
+    }, [])
 
     return (
         <div className="login">
@@ -64,18 +70,16 @@ const SignIN = () => {
                     </div>
                 </div>
 
-                <div className="login__check">
-                    <a href="#" className="login__forgot">Forgot Password?</a>
-                </div>
-
                 <button type="submit" className="login__button">Login</button>
 
                 <div className="login__register">
-                    Dont have an account? <Link to='/signup'>Register</Link>
+                    Dont have an account? <Link to='/signup' className="underline">Register</Link>
                 </div>
             </form>
-            <button className="btn btn-primary" onClick={handleGoogleLogin}>Google</button>
-            <button className="btn btn-primary" onClick={handleGithubLogin}>Github</button>
+            <div className="-mt-20 mx-auto space-x-5">
+                <button className="bg_btn_color btn text-white btn-primary" onClick={handleGoogleLogin}>Google</button>
+                <button className="bg_btn_color btn text-white btn-primary" onClick={handleGithubLogin}>Github</button>
+            </div>
         </div>
     );
 };

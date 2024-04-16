@@ -1,6 +1,7 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Auth Provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
+import { Link } from "react-router-dom";
 
 
 const SignUP = () => {
@@ -19,12 +20,15 @@ const SignUP = () => {
         setErrorMessage(null)
         if (password.length < 6) {
             setErrorMessage("Password need to be at-least 6 characters")
+            return
         }
         if (!/[A-Z]/.test(password)) {
             setErrorMessage("Password must need to contain an Uppercase letter ")
+            return
         }
         if (!/^(?=.*[a-z]).+$/.test(password)) {
             setErrorMessage("Password must need to contain an LowerCase letter ")
+            return
         }
 
         handleRegistrationAuth(email, password)
@@ -33,19 +37,24 @@ const SignUP = () => {
                 alert("successfully created user")
                 updateProfile(result.user, {
                     displayName: name,
-                    photoURL: photoURL
+                    photoURL: photoURL,
+                }).then(() => {
+                    console.log('profile updated');
                 })
-                    .then(console.log("profile updated"))
+                    // .then()
                     .catch(error => console.log("update>", error.message))
             })
             .catch(error => {
-                console.log(error.message)
+                setErrorMessage(error.message)
             })
 
     }
+    useEffect(() => {
+        document.title = "Registration"
+    }, [])
 
     return (
-        <div className="login">
+        <div className="login my-10">
 
             <form onSubmit={handleRegistration} className="login__form">
                 <h1 className="login__title">Registration</h1>
@@ -74,7 +83,7 @@ const SignUP = () => {
                 <button type="submit" className="login__button">Register</button>
 
                 <div className="login__register">
-                    Dont have an account? <a href="#">Register</a>
+                    already have an account? <Link to='/signin' className="underline">Login</Link>
                 </div>
             </form>
         </div>

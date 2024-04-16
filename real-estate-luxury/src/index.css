@@ -68,7 +68,10 @@
   color: var(--white-color);
   border-radius: 1rem;
   backdrop-filter: blur(16px);
-  background-color: rgba(128, 128, 128, 0.796);
+  /* background-color: rgba(128, 128, 128, 0.796); */
+  /* background-image: url(https://i.ibb.co/k4RmHGh/panorama-luxury-living-room-generative-ai-587448-2069.jpg); */
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 0.7749474789915967) 48%, rgba(43, 0, 255, 0.362) 100%);
 }
 
 .login__title {
@@ -172,6 +175,7 @@
   text-decoration: underline;
 }
 
+
 /*=============== BREAKPOINTS ===============*/
 /* For medium devices */
 @media screen and (min-width: 576px) {
@@ -190,3 +194,27 @@
 }
 
 /*! ------------------------------- */
+
+/* slider */
+.first_slider {
+  background-size: cover;
+  background: linear-gradient(to right, rgba(54, 50, 50, 0.577), rgba(0, 0, 0, 0)), url("https://i.ibb.co/1qdBwnB/bgOne.jpg");
+  ;
+}
+
+.second_slider {
+  background-size: cover;
+  background: linear-gradient(to right, rgba(54, 50, 50, 0.543), rgba(0, 0, 0, 0)), url("https://i.ibb.co/v4ytJpB/bgThree.jpg");
+  ;
+}
+
+.third_slider {
+  background-size: cover;
+  background: linear-gradient(to right, rgba(54, 50, 50, 0.577), rgba(0, 0, 0, 0)), url("https://i.ibb.co/CnQghbm/bgTwo.jpg");
+  ;
+}
+
+.bg_btn_color {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 0.7749474789915967) 48%, rgba(43, 0, 255, 0.362) 100%);
+}

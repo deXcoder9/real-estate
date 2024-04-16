@@ -1,5 +1,6 @@
 import { updateProfile } from "firebase/auth";
 import auth from "../../../firebase.config";
+import { useEffect } from "react";
 
 
 const UpdatePfp = () => {
@@ -19,10 +20,13 @@ const UpdatePfp = () => {
             console.log(error.message)
         });
     }
+    useEffect(() => {
+        document.title = "Update Profile"
+    }, [])
 
 
     return (
-        <div className="relative mx-auto w-full max-w-md bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:rounded-xl sm:px-10">
+        <div className="relative mx-auto w-full max-w-md bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:rounded-xl sm:px-10 my-14 ">
             <div className="w-full">
                 <div className="text-center">
                     <h1 className="text-3xl font-semibold text-gray-900">Update Your Profle</h1>
