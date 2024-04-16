@@ -6,6 +6,12 @@ https://dexcoder-assignment-nine.netlify.app/
 
 -This project is a real estate website designed to provide users with a seamless experience for browsing properties, updating profiles, and managing authentication.
 
+### NPM Packages:
+
+-AOS Package
+-Animate.css
+-Swiper slider
+
 ### Navbar Functionality: <br />
 
 -The navbar includes links for Home, Update Profile, and User Profile. The visibility of the user profile depends on login status.
