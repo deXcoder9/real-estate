@@ -1,16 +1,12 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Auth Provider/AuthProvider";
-import Aos from 'aos'
-import 'aos/dist/aos.css'
-import { useEffect } from 'react';
 import 'animate.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = () => {
     const { userInfo, handleSignOut } = useContext(AuthContext)
-    // console.log(userInfo)
 
     const handleLogOut = () => {
         handleSignOut()
@@ -25,9 +21,6 @@ const Navbar = () => {
         <li> <NavLink to='/userProfile'> User Profile </NavLink> </li>
         <li> <NavLink to='/cart'> Cart </NavLink> </li>
     </>
-    useEffect(() => {
-        Aos.init({ duration: 1600 });
-    }, [])
     return (
         <div className="navbar bg-base-100 animate__animated  animate__backInRight " >
             < div className="navbar-start" >
@@ -50,7 +43,7 @@ const Navbar = () => {
                 {
                     userInfo ?
                         <div className="flex space-x-5"> <img title={userInfo.displayName} className="h-14 rounded-full" src={userInfo.photoURL} /> <button onClick={handleLogOut} className="btn btn-primary"> Log Out</button>  </div>
-                        : <div> <button className="btn"> <Link to='/signin'>Login</Link> </button>
+                        : <div> <button className="btn bg-black opacity-90 text-white hover:text-black"> <Link to='/signin'>Login</Link> </button>
                         </div>
                 }
                 <ToastContainer />

@@ -26,11 +26,11 @@ const SingleResort = ({ resort }) => {
                             facilities.map((info, idx) => <p key={idx} className='capitalize'> {info} </p>)
                         }
                     </div>
-                    <div className="flex space-x-8 py-3">
+                    <div className="flex space-x-8 py-3 justify-between">
                         <p className='py-1 text-red-500 capitalize'>{price}</p>
-                        <p className='uppercase bg-green-500 py-1 rounded-xl text-white px-5'>{status}</p>
+                        <p className='uppercase bg-gray-700 -translate-x-5 translate-y-5 rotate-[20deg] py-1 rounded-xl text-white px-5'>{status}</p>
                     </div>
-                    <Link to={`/details/${id}`} className="btn btn-primary">view Property</Link>
+                    <Link to={`/details/${id}`} className="btn bg-black opacity-90 text-white hover:text-black">view Property</Link>
                 </div>
             </div>
         </div >

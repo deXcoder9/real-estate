@@ -32,7 +32,7 @@ const Details = () => {
 
                 <div className="w-full  p-3  rounded-xl">
                     <img className="w-full rounded-xl h-[600px] " src={image} alt="" />
-                    <h2 className="font__merriweather text-2xl">{estate_title}</h2>
+                    <h2 className="font__merriweather text-2xl mt-7">{estate_title}</h2>
                     <small>{segment_name}</small>
                     <p className="text-gray-500">{description}</p>
                     <div className='flex space-x-7 py-1'>
@@ -46,14 +46,14 @@ const Details = () => {
                     </div>
                     <div className="flex space-x-8 py-3">
                         <p className='py-1 text-red-500 capitalize'>{price}</p>
-                        <p className='uppercase bg-green-500 py-1 rounded-xl text-white px-5'>{status}</p>
+                        <p className='uppercase bg-gray-700 py-1 rounded-xl text-white px-5'>{status}</p>
                     </div>
 
                     {
                         userInfo ?
-                            <button onClick={addToCart} className="btn btn-primary">Add To Card</button>
+                            <button onClick={addToCart} className="btn bg-black opacity-90 text-white hover:text-black">Add To Card</button>
                             :
-                            <button onClick={() => toast.error('Please sign in first ')} className="btn btn-primary">Add To Card</button>
+                            <button onClick={() => toast.error('Please sign in first ')} className="btn bg-black opacity-90 text-white hover:text-black">Add To Card</button>
                     }
                     <ToastContainer />
                 </div>
