@@ -2,7 +2,7 @@
 
 https://dexcoder-assignment-nine.netlify.app/
 
-### Overview: <br />
+## <a name="overview"> Overview</a>
 
 -This project is a real estate website designed to provide users with a seamless experience for browsing properties, updating profiles, and managing authentication.
 
@@ -11,6 +11,15 @@ https://dexcoder-assignment-nine.netlify.app/
 -AOS Package
 -Animate.css
 -Swiper slider
+
+## <a name="features">🔍 Features</a>
+**- Toast or Sweet Alert notifications** provide feedback on successful login/register actions or errors in password validation.
+
+**- Estates are categorized and displayed** with relevant information such as images, titles, descriptions, prices, and available facilities.
+
+**- Users can log** in using email and password or through social media platforms like Google, GitHub, Facebook, or Twitter.
+
+
 
 ## <a name="quick-start">🤸 Quick Start</a>
 
