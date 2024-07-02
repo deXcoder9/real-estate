@@ -1,24 +1,24 @@
 ## Live Link:
 
-https://real-estate-onigiri.netlify.app
+- https://real-estate-onigiri.netlify.app
 
 
 ## <a name="overview"> Overview</a>
 
--This project is a real estate website designed to provide users with a seamless experience for browsing properties, updating profiles, and managing authentication.
+- This project is a real estate website designed to provide users with a seamless experience for browsing properties, updating profiles, and managing authentication.
 
 ### NPM Packages:
 
--AOS Package
--Animate.css
--Swiper slider
+- AOS Package
+- Animate.css
+- Swiper slider
 
 ## <a name="features">🔍 Features</a>
-**- Toast or Sweet Alert notifications** provide feedback on successful login/register actions or errors in password validation.
+- **Toast or Sweet Alert notifications** provide feedback on successful login/register actions or errors in password validation.
 
-**- Estates are categorized and displayed** with relevant information such as images, titles, descriptions, prices, and available facilities.
+- **Estates are categorized and displayed** with relevant information such as images, titles, descriptions, prices, and available facilities.
 
-**- Users can log** in using email and password or through social media platforms like Google, GitHub, Facebook, or Twitter.
+- **Users can log** in using email and password or through social media platforms like Google, GitHub, Facebook, or Twitter.
 
 
 
@@ -74,19 +74,19 @@ The website features an engaging slider banner with a minimum of three slides to
 
 ### Estate Listings: <br />
 
--Estates are categorized and displayed with relevant information such as images, titles, descriptions, prices, and available facilities.
+- Estates are categorized and displayed with relevant information such as images, titles, descriptions, prices, and available facilities.
 
 ### Estate Details: <br />
 
--Users can view detailed information about a property, including amenities, location, and status, and navigate to the property's page.
+- Users can view detailed information about a property, including amenities, location, and status, and navigate to the property's page.
 Protected Routes:
 
 Certain pages, like the Update Profile and Estate Details, are accessible only when logged in, ensuring privacy and security.
 
 ### Toast Alerts: <br />
 
--Toast or Sweet Alert notifications provide feedback on successful login/register actions or errors in password validation.
+- Toast or Sweet Alert notifications provide feedback on successful login/register actions or errors in password validation.
 
 ### Extra Route: <br />
 
--An additional protected route offers meaningful content, enhancing the user experience beyond basic property listings.
+- An additional protected route offers meaningful content, enhancing the user experience beyond basic property listings.
